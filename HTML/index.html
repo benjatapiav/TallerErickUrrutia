@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="contenedor-menu">
+        <div class="contenedor-logo">
+            <a href="http://127.0.0.1:5500/HTML/index.html"><img src="../imagenes/logo.png" alt=""></a>
+        </div>
+        <div class="contenedor-links">
+            <a href="#seccion-2">Quienes Somos</a>
+            <a href="#seccion-3">Servicios</a>
+            <a href="#seccion-4">Ubicación</a>
+            <a href="#seccion-5">Contáctanos</a>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="dropdownButton()">☰</button>
+            <div class="dropdown-content">
+                <a href="#">Quienes somos</a>
+                <a href="#">Servicios</a>
+                <a href="#">Ubicación</a>
+                <a href="#">Contactanos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body -->
+     <!-- Seccion Imagen pintor-->
+    <section id="seccion-2">
+        <div class="contenedor-imagen">
+            <img src="../recursos/imagenes/Principales/pintor.png" alt="">
+        </div>
+        <div class="contenedor-quienesSomos">
+            <p>En Taller Erick Urrutia, nos especializamos en la pintura electrostática de piezas 
+                metálicas, garantizando acabados de máxima calidad y durabilidad. Contamos con maquinaria 
+                de última tecnología y profesionales de primer nivel, lo que nos permite cumplir con 
+                los más altos estándares. Nuestro proceso es limpio, ya que recuperamos y reutilizamos 
+                el exceso de pintura. Además, ofrecemos soporte técnico especializado y una excelente 
+                relación precio-calidad, brindando soluciones personalizadas para cada proyecto.
+            </p>
+        </div>
+
+    </section>
+    <!--Seccion interseccion-->
+    <!--Seccion cards-->
+    <section id="seccion-3">
+        <div id="tituloNuestroServicio">
+            <h1 class="tituloNuestroServicio">Nuestro Servicio</h1>
+        </div>
+        <div class="contenedor-cards">
+            <div class="card-1">
+                <a href="http://127.0.0.1:5500/HTML/videos.html" target="_blank"><img src="../recursos/imagenes/Iconos/precio.png" alt=""></a>
+                <h1>MEJOR COSTO</h1>
+                
+            </div>
+            <div class="card-2">
+                <a href="http://127.0.0.1:5500/HTML/videos.html" target="_blank"><img src="../recursos/imagenes/Iconos/calidad.png" alt=""></a>
+                <h1>EXELENTE CALIDAD</h1>
+                
+            </div>
+            <div class="card-3">
+                <a href="http://127.0.0.1:5500/HTML/videos.html" target="_blank"><img src="../recursos/imagenes/Iconos/reloj.png" alt=""></a>
+                <h1>TIEMPO DE ENTREGA</h1>
+                
+            </div>
+        </div>
+    </section>
+    <section id="seccion-4">
+        <div class="contenedor_Ubicacion">
+            <div class="contenedor_Contacto">
+                <ul>
+                    <li><a href="https://acortar.link/ndiK8F" target="_blank">
+                        <img src="../imagenes/iconos/direccion.png" alt=""></a>
+                        García de Cáceres 4048, Estación Central
+                    </li>
+                    <br>
+                    <li><a href=""><img src="../imagenes/iconos/gmail.png" alt=""></a>
+                        taller.pintura.electrostatica@gmail.com
+                    </li>
+                    <br>
+                    <li><a href=""><img src="../imagenes/iconos/whatsapp.png" alt=""></a>
+                        +569 6833 4941
+                    </li>
+                    <br>
+                    <li><a href=""><img src="../imagenes/iconos/telefono.png" alt=""></a>
+                        2 2779 2807
+                    </li>
+                    <br>
+                    <li><a href="https://www.instagram.com/taller.pintura.electrostatica/" target="_blank">
+                        <img src="../imagenes/iconos/instagram.png" alt=""></a>
+                        taller.pintura.electrostatica
+                    </li>
+                    <br>
+                    <li><a href="https://www.facebook.com/profile.php?id=100083002315546" target="_blank">
+                        <img src="../imagenes/iconos/facebook.png" alt=""></a>
+                        Taller Erick Urrutia
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contenedor_MapaTaller">
+                <a href="https://acortar.link/ndiK8F" target="_blank">
+                    <img src="../imagenes/servicios/mapa.png" alt="">
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="seccion-5">
+        <h1>Contáctanos</h1>
+        <div class="contenedor_Formulario">
+            <form action="https://api.web3forms.com/submit" method="POST" id="formulario" >
+                <input type="hidden" name="access_key" value="7b95d185-8512-486f-b8f0-03ff51cbd0fa">
+                <input type="hidden" name="subject" value="Nueva consulta de Cliente">
+                <input type="hidden" name="from_name" value="Consulta Taller">
+                <input type="hidden" name="redirect" value="http://127.0.0.1:5500/HTML/correo_enviado.html">
+                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                <label for="nombre">Nombre</label >
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+                <label for="empresa">Nombre de Empresa</label>
+                <input type="text" name="empresa" id="empresa">
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" id="telefono" required>
+                <label for="consulta">Descríbenos tu consulta</label>
+                <textarea name="consulta" id="consulta" placeholder="Quisiera pintar patas de sillas para un colegio..." required></textarea>
+                <div class="botonEnviar">
+                    <button type="submit">Enviar</button>
+                </div>
+                <div id="resultado"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="contenedor_footer">
+            <div class="contenedor_footerIconos1">
+                <ul>
+                    <li><a href="https://www.instagram.com/taller.pintura.electrostatica/" target="_blank"><img src="../imagenes/iconos/instagram_sf.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100083002315546" target="_blank"><img src="../imagenes/iconos/facebook_sf.png" alt=""></a></li>
+                    <li><a href="https://acortar.link/ndiK8F" target="_blank"><img src="../imagenes/iconos/direccion_sf.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="contenedor_footerLogo">
+                <a href=""><img src="../imagenes/iconos/logo_sf.png" alt=""></a>
+            </div>
+            <div class="contenedor_footerIconos2">
+                <ul>
+                    <li><img src="../imagenes/iconos/whatsapp_sf.png" alt=""><p>+569 6833 4941</p></li>
+                    <li><img src="../imagenes/iconos/telefono_sf.png" alt=""><p>2 2779 2807</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contenedor_marcaRegistrada">
+            <p>TALLER ERICK URRUTIA. © 2025. Desarrollado por <a href="https://www.facebook.com/benjamin.tapia.16" target="_blank">Benjamin Tapia.</a></p>
+        </div>
+
+    </div>
+
+    
+    <script>
+        window.onload = function(){
+            document.getElementById('formulario').reset();
+        };
+    </script>
+</body>
+
+
+</html>
