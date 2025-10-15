@@ -1,0 +1,397 @@
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('Fuentes/GlacialIndifference-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {scroll-behavior: smooth;}
+
+body{ margin:0px;}
+
+
+/*Estilo menu Navegador SECCION 1*/
+
+/*Contenedor MENU*/
+.contenedor-menu{
+    display: flex;
+    padding: 10px;
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.244);
+    max-height: 100px;
+    align-items: center;
+    justify-content: space-around;
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+
+}
+
+/*Contenedor Logo*/
+.contenedor-menu .contenedor-logo img{
+    height: 100px;
+}
+.contenedor-menu .dropdown {
+    display: none;
+}
+
+/*Contenedor Links de Navegacion*/
+.contenedor-menu .contenedor-links{
+    margin-right: 150px;
+    margin-left: 150px;
+    display: flex;
+    gap: 30px;
+}
+/*Estilo de links de navegacion*/
+.contenedor-menu .contenedor-links a{
+    font-family: sans-serif;
+    font-size: large;
+    padding: 15px;
+    border-radius:5%;
+    text-decoration: none;
+    box-shadow: black 1px;
+    transition: box-shadow 0.3s ease;
+    color: black;
+}
+.contenedor-menu .contenedor-links a:hover{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.2);
+ 
+}
+
+
+/*Responsive maximo de pantalla 1024px*/
+
+@media (max-width: 1024px){
+    /*Ocultar links de navegacion*/
+    .contenedor-menu .contenedor-links{
+        display: none;
+    }
+    /*Posicion contenedor de dropdown*/
+    .contenedor-menu .dropdown{
+        position:relative;
+        display: inline-block;
+    }
+    .contenedor-menu .dropdown .dropdown-button{
+        background-color: white;
+        border: none;
+        font-size: 50px;
+        transition: box-shadow 0.2s ease;
+        border-radius: 5px;
+    }
+    .contenedor-menu .dropdown .dropdown-button:hover{
+        border: none;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+    /*Ocultar por defecto contendio de dropdown*/
+    .contenedor-menu .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: white;
+        text-decoration: none;
+        top: 100%;
+        margin: 0px;
+        right: 0;
+        width: 150px;
+    }
+    /*Mostrar contenido de dropdown*/
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+    /*Estilo de links de dropdown*/
+    .contenedor-menu .dropdown-content a{
+        display: block;
+        padding: 15px 10px;
+        text-decoration: none;
+        color:black;
+        font-family: sans-serif;
+        transition: background-color 0.3s ease;
+        text-align: center;
+    }
+    .contenedor-menu .dropdown-content a:hover {
+        background-color: #dfdfdf;
+    }
+}
+
+/*Responsive de logo y dropdown segun pantalla*/
+
+@media(max-width: 667px){
+    .contenedor-menu .contenedor-logo img{
+        height: 90px;
+    }
+}
+@media(max-width: 480px){
+    .contenedor-menu .contenedor-logo img{
+        height: 75px;
+    }
+    .contenedor-menu .dropdown .dropdown-button{
+        font-size: 35px;
+    }
+}
+@media(max-width: 360px){
+    .contenedor-menu .contenedor-logo img{
+        height: 60px;
+    }
+}
+/*#########################################################################################################*/
+/*Estilo Quienes Somos SECCION 2*/
+
+
+/*Imagen pintor y titulo*/
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-imagen img{
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+}
+.contenedor-quienesSomos{
+    font-family: 'glacialIndifference';
+    font-size: 25px;
+    text-align: center;
+    justify-items: center;
+    padding: 40px;
+}
+.contenedor-quienesSomos p{
+    max-width: 700px;
+    padding: 30px;
+    transition: 0.4s ;
+}
+
+
+
+
+
+
+/*#########################################################################################################*/
+/*Estilo de Servicios SECCION 3*/
+
+/*Estilo cards*/
+.contenedor-cards{
+    display: flex;
+    height: auto;
+    gap: 50px;
+    margin: 0;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../imagenes/servicios/pintor2.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#tituloNuestroServicio{
+    text-align: center;
+}
+.tituloNuestroServicio{
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.contenedor-cards img{
+    padding: 5px;
+    width: 100%;
+    transition: border-radius 0.3s ease ;
+}
+.contenedor-cards img:hover{
+    border-radius: 10px;
+}
+.contenedor-cards .card-1,.card-2,.card-3{
+    height: 450px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px black;
+    transition: box-shadow 0.3s ease;
+}
+.contenedor-cards .card-1:hover, .card-2:hover, .card-3:hover{
+    background-color: rgba(255, 255, 255, 0.384);
+    box-shadow: 4px 4px 8px rgba(191, 191, 191, 0.5), -4px -4px 8px rgba(69, 69, 69, 0.5);
+    text-shadow: 1px 1px 2px black;
+}
+.contenedor-cards h1{
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px;
+    color:white;
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+}
+/*.contenedor-cards p{
+    font-family: sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+}*/
+
+/*#################################################################################3*/
+/*Estilo Seccion 4 Contacto y Ubicacion*/
+.contenedor_Ubicacion{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+}
+.contenedor_Contacto{
+    padding: 30px;
+    align-items: initial;
+    justify-content: center;
+    
+}
+.contenedor_Contacto li{
+    list-style: none;
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding: 6px;
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+.contenedor_Contacto ul li img{
+    width: 50px;
+    height: auto;
+}
+.contenedor_MapaTaller{
+    align-content: center;
+}
+.contenedor_Ubicacion .contenedor_MapaTaller a img{
+    width: 600px;
+    height: auto;
+    border-radius: 2%;
+    box-shadow: 1px 1px 2px rgba(191, 191, 191, 0.662), -1px -1px 2px rgba(191, 191, 191, 0.662);
+    transition: box-shadow 0.2s ease;
+}
+.contenedor_Ubicacion .contenedor_MapaTaller a img:hover{
+    box-shadow: 4px 4px 8px rgba(117, 117, 117, 0.8), -4px -4px 8px rgba(117, 117, 117, 0.8);
+}
+
+/*#################################################################################3*/
+/*Estilo Seccion 5 Formulario de contacto*/
+#seccion-5 h1{
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+}
+.contenedor_Formulario{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.contenedor_Formulario #formulario{
+    display: grid;
+    width: 50%;
+    gap: 10px;
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    max-width: 500px;
+    padding:30px;
+    box-shadow: 1px 1px 1px rgba(191, 191, 191, 0.425), -1px -1px 1px rgba(191, 191, 191, 0.425);
+}
+#formulario textarea{
+    min-height: 70px;
+    max-width: 600px;
+    max-height: 100px;
+}
+#formulario input{
+    padding: 5px;
+}
+.botonEnviar{
+    display: flex;
+    justify-content: center;
+}
+#formulario button{
+    max-width: 200px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 255, 108);
+    border: none;
+    font-size: 20px;
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+}
+#formulario button:hover{
+    background-color: rgb(238, 238, 103);
+}
+
+/*#############################################################################################*/
+/*Seccion 6 Footer*/
+.footer{
+    background-color: rgba(230, 230, 230, 0.432);
+    margin: 0px;
+    height: 180px;
+    font-family:'GlacialIndifference',Geneva, Tahoma, sans-serif;
+}
+.contenedor_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px;
+}
+.contenedor_footer .contenedor_footerIconos1 ul{
+    display: flex;
+    gap: 30px;
+}
+.contenedor_footer .contenedor_footerIconos1 img{
+    height: 40px;
+}
+.contenedor_footer .contenedor_footerIconos1 li{
+    list-style: none;
+}
+.contenedor_footer .contenedor_footerLogo img{
+    height: 80px;
+}
+
+.contenedor_footer .contenedor_footerIconos2 ul{
+    display: flex;
+    gap: 30px;
+
+}
+.contenedor_footer .contenedor_footerIconos2 img{
+    height: 40px;
+    list-style: none;
+}
+.contenedor_footer .contenedor_footerIconos2 ul li{
+    list-style: none;
+    align-items: center;
+}
+.contenedor_marcaRegistrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(209, 209, 209, 0.491);
+    margin: 0px;
+    
+}
+.contenedor_marcaRegistrada a{
+    color: rgb(133, 0, 0);
+    font-size: large;
+    text-decoration: none;
+}
+
+
+
+/*Media queries seccion body*/
+
+@media(max-width: 886px){
+    .contenedor-cards{
+        display: grid;
+        grid-column: auto;
+    }
+    .contenedor-cards .card-1,.card-2,.card-3{
+        height: 600px;
+        width: 400px;
+    }
+
+}
+@media(max-width: 400px){
+    .contenedor-cards .card-1,.card-2,.card-3{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*Footer*/
